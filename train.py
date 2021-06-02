@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 #import DecisionTreeClassifier from the Sklearn library
 from sklearn.tree import DecisionTreeClassifier
-
+import pickle 
 #List with attribute names (it is optional to do this but it gives a better understanding of the data for a human reader)
 #attribute_names = ['variance_wavelet_transformed_image', 'skewness_wavelet_transformed_image', 'curtosis_wavelet_transformed_image', 'entropy_image', 'class']
 
@@ -35,3 +35,6 @@ classifier = classifier.fit(X_train, y_train)
 
 #Print that training is ready and show accuracy
 print('Classifier trainiert! Akkuranz: {}%'.format(classifier.score(X_test,y_test)*100))
+
+with open('classifier_decision_tree.pkl', 'wb') as f:
+    pickle.dump(classifier, f)
