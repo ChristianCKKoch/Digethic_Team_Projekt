@@ -10,3 +10,9 @@ and     https://docs.github.com/en/actions/guides/building-and-testing-python
 
 #Chris DIG-84
 adding predict data file "Iris data Predict" in "Data"
+
+
+#Chris DIG-85
+adding train.py file (without pickle file)
+updated requirements.txt
+updated actions.yml: install requirements + run the train file
