@@ -63,3 +63,5 @@ pred = knn.predict(X_test)
 print(confusion_matrix(y_test,pred))
 print('\n')
 print(classification_report(y_test,pred))
+
+##should work, but doesn't
