@@ -9,7 +9,7 @@ from sklearn.tree import DecisionTreeClassifier
 #attribute_names = ['variance_wavelet_transformed_image', 'skewness_wavelet_transformed_image', 'curtosis_wavelet_transformed_image', 'entropy_image', 'class']
 
 #Read csv-file
-data = pd.read_csv('data/Iris data')
+data = pd.read_csv('data\Iris data')
 
 #Shuffle data
 data = data.sample(frac=1)
