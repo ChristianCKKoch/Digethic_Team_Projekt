@@ -16,3 +16,4 @@ adding predict data file "Iris data Predict" in "Data"
 adding train.py file (without pickle file)
 updated requirements.txt
 updated actions.yml: install requirements + run the train file
+DIG-87:Predict.py fertig!
