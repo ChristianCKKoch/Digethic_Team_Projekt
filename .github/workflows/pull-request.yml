@@ -1,0 +1,24 @@
+name: Pull Request
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  train-model:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8.5"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Train model
+        run: python train.py
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: classifier_decision_tree.pkl
+          path: classifier_decision_tree.pkl
